@@ -1,7 +1,15 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #e0f7fa;
   margin: 0;
+  line-height: 1.6;
   padding: 20px;
 }
 
@@ -31,47 +39,83 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 2.5em;
-  margin: 20px 0;
+  font-size: 3em;
+  margin-bottom: 20px;
+  font-weight: bold;
   animation: rainbow 10s infinite;
 }
 
+/* Main Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #00bcd4;
+  color: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+/* Link Style */
+a {
+  text-decoration: none;
+  color: #3498db;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2980b9;
+}
+
 form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: auto;
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   max-width: 400px;
-  margin: auto;
+  align-items: center;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="email"],
+textarea {
   padding: 10px;
   border: 2px solid #00796b;
   border-radius: 5px;
+  font-size: 1em;
   width: calc(100% - 22px);
   margin-bottom: 20px;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s ease;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
   border-color: #00bcd4;
   outline: none;
 }
 
-button {
-  padding: 10px 15px;
-  background-color: #00bcd4;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-  transition: background-color 0.3s;
-}
-
 button:hover {
   background-color: #0097a7;
+  transform: translateY(-2px);
 }
 
 label {
@@ -83,15 +127,10 @@ label {
   font-weight: bold;
 }
 
-#response_container {
-  width: 80%;
-  max-width: 500px;
-  margin: 20px auto;
-  padding: 5px;
-  background-color: #e0f7fa;
-  border: 1px solid #00796b;
-  border-radius: 5px;
-  text-align: center;
-  font-weight: bold;
-  color: #00796b;
+footer a {
+  color: #3498db;
+}
+
+footer a:hover {
+  color: #2980b9;
 }

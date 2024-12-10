@@ -1,14 +1,17 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-@app.route("/", methods=["GET", "POST"])
+# Route for the home page
+@app.route('/')
 def index():
-    if request.method == "POST":
-        user_input = request.form.get("text_field")
-        response = f"Anda mengirimkan: {user_input}"
-        return jsonify({"message": response})
-    return render_template("index.html")
+    return render_template('index.html')
 
-if __name__ == "__main__":
+# Route for form submission
+@app.route('/submit', methods=['POST'])
+def submit():
+    name = request.form.get('name')
+    return f"Hello, {name}!"
+
+if __name__ == '__main__':
     app.run(debug=True)
