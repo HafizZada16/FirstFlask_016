@@ -11,7 +11,7 @@ def index():
 @app.route('/submit', methods=['POST'])
 def submit():
     name = request.form.get('name')
-    return f"Hello, {name}!"
+    return render_template('index.html', name=name)
 
 if __name__ == '__main__':
     app.run(debug=True)

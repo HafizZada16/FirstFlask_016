@@ -11,8 +11,14 @@
     <form action="/submit" method="POST">
       <a href="/about">About</a>
       <h2>Masukkan Nama :</h2>
-      <input type="text" name="name" placeholder="Enter your name" />
+      <input type="text" name="name" placeholder="Enter your name" required />
       <button type="submit">Submit</button>
     </form>
+
+    {% if name %}
+    <div class="result">
+      <strong>Hello, {{ name }}!</strong>
+    </div>
+    {% endif %}
   </body>
 </html>
