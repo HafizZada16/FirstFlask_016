@@ -18,10 +18,10 @@ body {
     color: rgb(255, 0, 0);
   } /* Merah */
   16% {
-    color: rgb(255, 127, 0);
+    color: rgb(255, 187, 0);
   } /* Oranye */
   33% {
-    color: rgb(255, 220, 0);
+    color: rgb(208, 255, 0);
   } /* Kuning */
   50% {
     color: rgb(0, 255, 0);
@@ -154,3 +154,4 @@ footer a:hover {
 .result:hover {
   transform: scale(1.05); /* Efek zoom saat hover */
 }
+ 
